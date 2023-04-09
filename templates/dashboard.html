@@ -1,0 +1,29 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}
+Dashboard
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='i_form.css')}}">
+{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+        <form class="form-signin" method="POST" action="/logout">
+          <h3 class="page-header">Добро пожаловать {{ login }}</h3>
+
+          <div class="row placeholders">
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>{{ telegram_name }}</h4>
+                <h5>{{ telegram_id }}</h5><br>
+                  <br>
+               <button class="btn btn-lg btn-primary btn-block" type="submit">Выйти из аккаунта</button>
+              </form>
+            </div>
+          </div>
+    </div>
+{% endblock %}

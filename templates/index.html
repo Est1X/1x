@@ -1,0 +1,21 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}
+Login
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='i_form.css')}}">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+      <form class="form-i">
+        <h3 class="form-signin-heading">Вы зарегистрированы?</h3><br>
+        <button class="btn btn-lg btn-primary btn-block" type="button" onclick="window.location.href='{{ url_for( 'login' ) }}';">Авторизация</button>
+        <button class="btn btn-lg btn-primary btn-block" type="button" onclick="window.location.href='https://t.me/AioFlaskBot'">Регистрация</button>
+      </form>
+    </div> <!-- /container -->
+{% endblock %}
