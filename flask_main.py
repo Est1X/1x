@@ -7,9 +7,9 @@ from wtforms.validators import InputRequired, Length
 import sql_func
 import hashlib
 
-flask_hook = 'sfalkjglkafgiuriterjvist83u2t0'
+flask_hook = 'flask webhook url'
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'Thisissupposedtobesecret!'
+app.config['SECRET_KEY'] = 'secret key'
 bootstrap = Bootstrap(app)
 sql_func.create_db()
 class LoginForm(FlaskForm):
